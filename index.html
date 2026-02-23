@@ -3,129 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adam Cengeloglu | Portfolio</title>
+    <title>Resume | Adam Cengeloglu</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Small layout helpers so this works even if your styles.css doesn't have these yet -->
+    <style>
+      .resume-top {
+        margin-top: 14px;
+        margin-bottom: 18px;
+      }
+      .profile-row {
+        display: flex;
+        gap: 18px;
+        align-items: stretch;
+        flex-wrap: wrap;
+      }
+      .profile-left {
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        flex-wrap: wrap;
+      }
+      .profile-photo {
+        width: 170px;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 16px;
+        display: block;
+      }
+      .profile-note {
+        flex: 1;
+        min-width: 260px;
+      }
+      .editable-box {
+        width: 100%;
+        min-height: 210px;
+        padding: 14px 14px;
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: inherit;
+        font: inherit;
+        line-height: 1.5;
+        resize: vertical;
+      }
+      .editable-label {
+        font-size: 0.9rem;
+        opacity: 0.85;
+        margin: 0 0 8px;
+      }
+    </style>
   </head>
 
   <body>
     <div class="background-glow" aria-hidden="true"></div>
 
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#home" aria-label="Home">AC</a>
+    <main class="container section resume-page">
+      <a class="button ghost" href="index.html">← Back to portfolio</a>
 
-        <!-- About -->
-      <section id="about" class="container section about">
-        <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2>Adam Cengeloglu</h2>
-        </div>
-
-        <div class="about-wrap">
-          <img
-            class="profile-photo"
-            src="me.jpg"
-            alt="Photo of Adam Cengeloglu"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='https://via.placeholder.com/640x800.png?text=Upload+me.jpg+to+repo';"
-          />
-        </div>
-      </section>
-
-        <nav aria-label="Primary">
-          <ul class="nav-links">
-            <li class="nav-dropdown">
-              <a class="nav-trigger" href="#projects">Projects</a>
-              <ul class="dropdown-menu" aria-label="Project links">
-                <li><a href="emergency.html">FastDispatch</a></li>
-                <li><a href="#projects">AI Productivity App</a></li>
-                <li><a href="#projects">Dispatch Simulator</a></li>
-              </ul>
-            </li>
-
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+      <div class="section-heading">
+        <p class="eyebrow">Resume</p>
+        <h1 class="page-title">Adam Cengeloglu</h1>
       </div>
-    </header>
 
-    <main id="home">
-      <!-- Projects (top) -->
-      <section id="projects" class="container section top-section">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Projects</h2>
-        </div>
+      <!-- Photos -->
+      <section class="resume-top" aria-label="Profile photos and intro">
+        <div class="profile-row">
+          <div class="profile-left">
+            <!--imgs -->
+            <img
+              class="profile-photo"
+              src="me1.jpg"
+              alt="Photo of Adam Cengeloglu."
+              loading="lazy"
+            />
+            <img
+              class="profile-photo"
+              src="me2.jpg"
+              alt="Another photo of Adam Cengeloglu"
+              loading="lazy"
+            />
+             <img
+              class="profile-photo"
+              src="me3.jpg"
+              alt="Another photo of Adam Cengeloglu"
+              loading="lazy"
+            />
+          </div>
 
-        <div class="project-grid single-project">
-          <a class="card project-link" href="emergency.html">
-            <h3>FastDispatch Emergency Training Simulator</h3>
-            <p>
-              AI-powered emergency dispatcher training simulator with timed scenarios,
-              decision making, and chatbot response practice. Built at a hackathon
-              to train first responders through interactive simulations.
-            </p>
-
-            <ul class="tag-list" aria-label="Project tags">
-              <li>AI</li>
-              <li>Emergency Tech</li>
-              <li>Training Simulator</li>
-            </ul>
-
-            <span class="open-project">Open project page →</span>
-          </a>
-        </div>
-      </section>
-
-      <!-- Hero -->
-      <section class="hero container">
-        <p class="eyebrow">Computer Engineering Student</p>
-
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button ghost" href="#contact">Contact Me</a>
+          <div class="profile-note">
+            <p class="editable-label">Editable text box (you can change this anytime)</p>
+            <textarea class="editable-box" placeholder="Type your intro here...">
+Senior at Westview High School (Class of 2026) with a 4.21 GPA, focused on Computer Engineering, AI, and real-world problem solving. Experienced in leadership, emergency training simulations, athletics, and technical development.
+            </textarea>
+          </div>
         </div>
       </section>
 
-    
-      <!-- Resume -->
-      <section id="resume" class="container section">
-        <div class="section-heading">
-          <p class="eyebrow">Resume</p>
-          <h2>Readable Resume</h2>
-        </div>
+      <div class="hero-actions">
+        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
+        <a class="button ghost" href="resume.pdf" download>Download PDF</a>
+      </div>
 
-        <div class="hero-actions">
-          <a class="button primary" href="resume.html">Open Resume Page</a>
-          <a class="button ghost" href="resume.pdf" target="_blank" rel="noopener">
-            Open Resume PDF
-          </a>
-        </div>
-      </section>
+      <section class="resume-card" aria-label="Resume content">
+        <h2 class="resume-h2">Education</h2>
+        <p class="resume-p">
+          <strong>Westview High School — San Diego, CA</strong><br />
+          Graduation: June 2026<br />
+          GPA: 4.21
+        </p>
+        <ul class="resume-list">
+          <li>AP Calculus AB & BC</li>
+          <li>AP Physics 1</li>
+          <li>AP Computer Science Principles & Software A</li>
+          <li>AP Biology and AP US Government</li>
+          <li>Honors Physics, Honors Biology, Honors Humanities, Honors American Literature</li>
+        </ul>
 
-      <!-- Contact -->
-      <section id="contact" class="container section contact">
-        <div class="section-heading">
-          <p class="eyebrow">Get in Touch</p>
-        </div>
+        <h2 class="resume-h2">Technical Skills</h2>
+        <ul class="resume-list">
+          <li>Programming: Java, Python, JavaScript</li>
+          <li>Tools: VS Code, Eclipse, Virtual Machines, Google Drive, Microsoft Word</li>
+          <li>Interests: AI, Simulation Systems, Software Development</li>
+        </ul>
 
-        <a class="button primary" href="mailto:adamceng98@gmail.com">
-          adamceng98@gmail.com
-        </a>
+        <h2 class="resume-h2">Project Highlight</h2>
+        <p class="resume-p">
+          <strong>AI Emergency Dispatch Training Simulator (TritonHacks 3rd Place)</strong><br />
+          Built an AI-powered simulator that mimics real-life distress calls and quizzes trainees on
+          emergency response decisions. Developed using Python and the Google Gemini API, demonstrating
+          adaptability, technical skill, and real-world problem solving under pressure.
+        </p>
+
+        <h2 class="resume-h2">Leadership & Community Service</h2>
+        <ul class="resume-list">
+          <li>
+            <strong>Link Crew President (2024–Present)</strong> — Lead 90+ student leaders and support
+            550+ incoming freshmen through mentorship and orientation programs.
+          </li>
+          <li>
+            <strong>Westview School Ambassador (2025–Present)</strong> — Promote academic achievement,
+            leadership, and school engagement within the community.
+          </li>
+          <li>
+            <strong>Scripps La Jolla Volunteer (2023–Present)</strong> — Assist patients, support staff,
+            and maintain clinical equipment while completing 200+ volunteer hours.
+          </li>
+          <li>
+            <strong>FBI Teen Ambassador (2024–Present)</strong> — Support FBI community outreach and public events.
+          </li>
+          <li>
+            <strong>Community Emergency Response Team Volunteer (2024–Present)</strong> — Act as a simulated
+            patient in emergency preparedness training scenarios.
+          </li>
+        </ul>
+
+        <h2 class="resume-h2">Work Experience</h2>
+        <ul class="resume-list">
+          <li>
+            <strong>Lifeguard — Marine Corps Air Station Miramar (2024–Present)</strong><br />
+            Department of Defense civilian employee responsible for the safety of Marines and their families.
+            CPR & AED Certified.
+          </li>
+          <li>
+            <strong>Adaptive Swim Instructor — Rancho Family YMCA (2024–Present)</strong><br />
+            Teach life-saving aquatic skills to individuals with disabilities and diverse age groups,
+            focusing on safety, confidence, and skill development.
+          </li>
+        </ul>
+
+        <h2 class="resume-h2">Athletics</h2>
+        <ul class="resume-list">
+          <li>
+            <strong>Varsity Water Polo (2022–Present)</strong> — CIF San Diego Finalist (2nd Place, 2024),
+            JV Captain (10th & 11th), led team meetings, warm-ups, and youth camps.
+          </li>
+          <li>
+            Competitive Water Polo & Swimming for 8+ years, including USA Water Polo Junior Olympics
+            and national tournaments.
+          </li>
+        </ul>
+
+        <h2 class="resume-h2">Programs & Achievements</h2>
+        <ul class="resume-list">
+          <li>3rd Place — UCSD TritonHacks</li>
+          <li>USA Water Polo Academic All-American (Grades 9–12)</li>
+          <li>California Scholarship Federation Member</li>
+          <li>PTSA Student Award for AP Computer Science</li>
+          <li>Science & Technology Exploration Program — Cal Poly Pomona (AI, Engineering, Cybersecurity)</li>
+          <li>Python Programming Program — University of California, San Diego</li>
+          <li>FBI Teen Academy (Cybersecurity, Safety, Emergency Training)</li>
+        </ul>
+
+        <h2 class="resume-h2">Contact</h2>
+        <p class="resume-p">
+          Email: adamceng98@gmail.com<br />
+          Phone: (858) 500-9446<br />
+          Location: San Diego, California
+        </p>
       </section>
     </main>
-
-    <footer class="container site-footer">
-      <p>© <span id="year"></span> Adam Cengeloglu</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>
