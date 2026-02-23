@@ -8,10 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
     />
-
     <link rel="stylesheet" href="styles.css" />
   </head>
 
@@ -20,13 +19,13 @@
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#home">AC</a>
+        <a class="brand" href="#home" aria-label="Home">AC</a>
 
         <nav aria-label="Primary">
           <ul class="nav-links">
             <li class="nav-dropdown">
               <a class="nav-trigger" href="#projects">Projects</a>
-              <ul class="dropdown-menu">
+              <ul class="dropdown-menu" aria-label="Project links">
                 <li><a href="emergency.html">FastDispatch</a></li>
                 <li><a href="#projects">AI Productivity App</a></li>
                 <li><a href="#projects">Dispatch Simulator</a></li>
@@ -41,7 +40,7 @@
     </header>
 
     <main id="home">
-      <!-- PROJECTS AT TOP -->
+      <!-- Projects (top) -->
       <section id="projects" class="container section top-section">
         <div class="section-heading">
           <p class="eyebrow">Selected Work</p>
@@ -56,26 +55,29 @@
               decision making, and chatbot response practice. Built at a hackathon
               to train first responders through interactive simulations.
             </p>
-            <ul class="tag-list">
+
+            <ul class="tag-list" aria-label="Project tags">
               <li>AI</li>
               <li>Emergency Tech</li>
               <li>Training Simulator</li>
             </ul>
+
             <span class="open-project">Open project page →</span>
           </a>
         </div>
       </section>
 
-      <!-- HERO (NO BIG HEADLINE) -->
+      <!-- Hero -->
       <section class="hero container">
         <p class="eyebrow">Computer Engineering Student</p>
+
         <div class="hero-actions">
           <a class="button primary" href="#projects">View Projects</a>
           <a class="button ghost" href="#contact">Contact Me</a>
         </div>
       </section>
 
-      <!-- YOUR PHOTO -->
+      <!-- About -->
       <section id="about" class="container section about">
         <div class="section-heading">
           <p class="eyebrow">About Me</p>
@@ -87,26 +89,30 @@
             class="profile-photo"
             src="me.jpg"
             alt="Photo of Adam Cengeloglu"
+            loading="lazy"
             onerror="this.onerror=null; this.src='https://via.placeholder.com/640x800.png?text=Upload+me.jpg+to+repo';"
           />
         </div>
       </section>
 
-      <!-- RESUME -->
+      <!-- Resume -->
       <section id="resume" class="container section">
         <div class="section-heading">
           <p class="eyebrow">Resume</p>
           <h2>Readable Resume</h2>
         </div>
+
         <div class="hero-actions">
           <a class="button primary" href="resume.html">Open Resume Page</a>
-          <a class="button ghost" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
+          <a class="button ghost" href="resume.pdf" target="_blank" rel="noopener">
+            Open Resume PDF
+          </a>
         </div>
       </section>
 
-      <!-- CONTACT (this was missing) -->
+      <!-- Contact -->
       <section id="contact" class="container section contact">
-        <div>
+        <div class="section-heading">
           <p class="eyebrow">Get in Touch</p>
         </div>
 
