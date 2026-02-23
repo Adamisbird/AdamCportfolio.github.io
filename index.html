@@ -3,148 +3,140 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adam Cengeloglu | Portfolio</title>
+    <title>FastDispatch | Adam Cengeloglu</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-    />
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      /* Top profile section */
+      .profile-section {
+        margin: 24px 0 28px 0;
+      }
+
+      .profile-row {
+        display: flex;
+        align-items: stretch;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .profile-images {
+        display: flex;
+        gap: 16px;
+        flex-shrink: 0;
+      }
+
+      .profile-images img {
+        width: 180px;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      }
+
+      .profile-textbox {
+        flex: 1;
+        min-width: 260px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .profile-textbox label {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+        opacity: 0.8;
+      }
+
+      .editable-box {
+        width: 100%;
+        min-height: 230px;
+        padding: 16px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+        color: inherit;
+        font-family: inherit;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        resize: vertical;
+        outline: none;
+      }
+
+      .editable-box:focus {
+        border-color: rgba(255, 165, 0, 0.6); /* matches your orange theme */
+      }
+    </style>
   </head>
 
   <body>
-    <div class="background-glow" aria-hidden="true"></div>
+    <div class="background-glow"></div>
 
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#home" aria-label="Home">AC</a>
+    <main class="container section project-page">
+      <a class="button ghost" href="index.html">← Back to portfolio</a>
 
-        <!-- About -->
-      <section id="about" class="container section about">
-        <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2>Adam Cengeloglu</h2>
-        </div>
-
-        <div class="about-wrap">
-          <img
-            class="profile-photo"
-            src="me.jpg"
-            alt="Photo of Adam Cengeloglu"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='https://via.placeholder.com/640x800.png?text=Upload+me.jpg+to+repo';"
-          />
-        </div>
-      </section>
-
-        <nav aria-label="Primary">
-          <ul class="nav-links">
-            <li class="nav-dropdown">
-              <a class="nav-trigger" href="#projects">Projects</a>
-              <ul class="dropdown-menu" aria-label="Project links">
-                <li><a href="emergency.html">FastDispatch</a></li>
-                <li><a href="#projects">AI Productivity App</a></li>
-                <li><a href="#projects">Dispatch Simulator</a></li>
-              </ul>
-            </li>
-
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+      <div class="section-heading">
+        <p class="eyebrow">Hackathon Project</p>
+        <h1>FastDispatch Emergency Training Simulator</h1>
       </div>
-    </header>
 
-    <main id="home">
-      <!-- Projects (top) -->
-      <section id="projects" class="container section top-section">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Projects</h2>
-        </div>
+      <!-- PROFILE SECTION (Photos + Editable Text) -->
+      <!-- This is ABOVE everything else and directly under the header -->
+      <section class="profile-section">
+        <div class="profile-row">
+          
+          <!-- LEFT: Your photos (use SAME images as index page) -->
+          <div class="profile-images">
+            <!-- Replace with the exact filenames from your index page -->
+            <img src="me1.png" alt="Adam Cengeloglu photo 1" />
+            <img src="me2.png" alt="Adam Cengeloglu photo 2" />
+          </div>
 
-        <div class="project-grid single-project">
-          <a class="card project-link" href="emergency.html">
-            <h3>FastDispatch Emergency Training Simulator</h3>
-            <p>
-              AI-powered emergency dispatcher training simulator with timed scenarios,
-              decision making, and chatbot response practice. Built at a hackathon
-              to train first responders through interactive simulations.
-            </p>
+          <!-- RIGHT: Editable text box -->
+          <div class="profile-textbox">
+            <label>Edit this text (About / Intro)</label>
+            <textarea class="editable-box">
+I am a Computer Engineering-focused student and 3rd place TritonHacks winner who built FastDispatch, an AI-powered emergency training simulator. 
 
-            <ul class="tag-list" aria-label="Project tags">
-              <li>AI</li>
-              <li>Emergency Tech</li>
-              <li>Training Simulator</li>
-            </ul>
+This project simulates real dispatcher scenarios using AI chat interactions and timed decision-making to train users under pressure. It combines Python, AI APIs, and realistic scenario logic to create an interactive learning experience for emergency response training.
 
-            <span class="open-project">Open project page →</span>
-          </a>
+(You can edit this text directly in the website.)
+            </textarea>
+          </div>
+
         </div>
       </section>
 
-      <!-- Hero -->
-      <section class="hero container">
-        <p class="eyebrow">Computer Engineering Student</p>
+      <p class="hero-copy">
+        FastDispatch is an AI-powered emergency response training system designed
+        to simulate real dispatcher scenarios. Built to help users practice
+        high-pressure decision making with realistic timed interactions and
+        chatbot simulations.
+      </p>
 
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button ghost" href="#contact">Contact Me</a>
-        </div>
-      </section>
+      <a
+        class="button primary"
+        href="https://devpost.com/software/fastdispatch"
+        target="_blank"
+      >
+        View on Devpost
+      </a>
 
-      <!-- About -->
-      <section id="about" class="container section about">
-        <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2>Adam Cengeloglu</h2>
-        </div>
+      <section class="image-grid">
+        <figure class="image-card">
+          <img src="project1.png" alt="FastDispatch Screenshot 1" />
+          <figcaption>Main interface</figcaption>
+        </figure>
 
-        <div class="about-wrap">
-          <img
-            class="profile-photo"
-            src="me.jpg"
-            alt="Photo of Adam Cengeloglu"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='https://via.placeholder.com/640x800.png?text=Upload+me.jpg+to+repo';"
-          />
-        </div>
-      </section>
+        <figure class="image-card">
+          <img src="project2.png" alt="FastDispatch Screenshot 2" />
+          <figcaption>Scenario system</figcaption>
+        </figure>
 
-    
-      <!-- Resume -->
-      <section id="resume" class="container section">
-        <div class="section-heading">
-          <p class="eyebrow">Resume</p>
-          <h2>Readable Resume</h2>
-        </div>
-
-        <div class="hero-actions">
-          <a class="button primary" href="resume.html">Open Resume Page</a>
-          <a class="button ghost" href="resume.pdf" target="_blank" rel="noopener">
-            Open Resume PDF
-          </a>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="container section contact">
-        <div class="section-heading">
-          <p class="eyebrow">Get in Touch</p>
-        </div>
-
-        <a class="button primary" href="mailto:adamceng98@gmail.com">
-          adamceng98@gmail.com
-        </a>
+        <figure class="image-card">
+          <img src="project3.png" alt="FastDispatch Screenshot 3" />
+          <figcaption>AI chatbot simulation</figcaption>
+        </figure>
       </section>
     </main>
-
-    <footer class="container site-footer">
-      <p>© <span id="year"></span> Adam Cengeloglu</p>
-    </footer>
-
-    <script src="script.js"></script>
   </body>
 </html>
