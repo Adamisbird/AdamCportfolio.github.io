@@ -1,14 +1,9 @@
-
----
-
-## index.html
-```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Carter | Portfolio</title>
+    <title>Adam Cengeloglu | Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -25,16 +20,16 @@
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#home" aria-label="Home">AC</a>
+        <a class="brand" href="#home">AC</a>
 
         <nav aria-label="Primary">
           <ul class="nav-links">
             <li class="nav-dropdown">
               <a class="nav-trigger" href="#projects">Projects</a>
-              <ul class="dropdown-menu" aria-label="Project links">
+              <ul class="dropdown-menu">
                 <li><a href="emergency.html">FastDispatch</a></li>
-                <li><a href="#projects">Sunrise CRM (dummy)</a></li>
-                <li><a href="#projects">Orbit Notes (dummy)</a></li>
+                <li><a href="#projects">AI Productivity App</a></li>
+                <li><a href="#projects">Dispatch Simulator</a></li>
               </ul>
             </li>
 
@@ -46,7 +41,7 @@
     </header>
 
     <main id="home">
-      <!-- Projects first (top of page) -->
+      <!-- PROJECTS AT TOP -->
       <section id="projects" class="container section top-section">
         <div class="section-heading">
           <p class="eyebrow">Selected Work</p>
@@ -54,87 +49,89 @@
         </div>
 
         <div class="project-grid single-project">
-          <a class="card project-link" href="emergency.html" aria-label="Open FastDispatch project page">
+          <a class="card project-link" href="emergency.html">
             <h3>FastDispatch Emergency Training Simulator</h3>
             <p>
-              Interactive emergency dispatcher training app with quizzes, timed scenarios,
-              and AI-assisted conversation practice.
+              AI-powered emergency dispatcher training simulator with timed scenarios,
+              decision making, and chatbot response practice. Built at a hackathon
+              to train first responders through interactive simulations.
             </p>
             <ul class="tag-list">
-              <li>Emergency Response</li>
-              <li>Training</li>
-              <li>AI Chatbot</li>
+              <li>AI</li>
+              <li>Emergency Tech</li>
+              <li>Training Simulator</li>
             </ul>
             <span class="open-project">Open project page →</span>
           </a>
         </div>
       </section>
 
-      <!-- Hero (NO big headline line) -->
-      <section class="hero container" aria-label="Intro">
-        <p class="eyebrow">Full-Stack Developer</p>
+      <!-- HERO (NO BIG HEADLINE) -->
+      <section class="hero container">
+        <p class="eyebrow">Computer Engineering Student</p>
         <p class="hero-copy">
-          I design and engineer performant web experiences with a strong focus on usability,
-          accessibility, and maintainable architecture.
+          I build high-impact AI tools, productivity systems, and interactive
+          applications focused on real-world problem solving and clean design.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">View Projects</a>
-          <a class="button ghost" href="#contact">Let’s Talk</a>
+          <a class="button ghost" href="#contact">Contact Me</a>
         </div>
       </section>
 
-      <!-- Your photo -->
+      <!-- YOUR PHOTO -->
       <section id="about" class="container section about">
         <div class="section-heading">
           <p class="eyebrow">About Me</p>
-          <h2>Photo</h2>
+          <h2>Adam Cengeloglu</h2>
         </div>
 
         <div class="about-wrap">
           <img
             class="profile-photo"
             src="me.jpg"
-            alt="Portrait photo of Alex Carter"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='https://via.placeholder.com/640x800.png?text=Add+me.jpg+to+repo';"
+            alt="Photo of Adam Cengeloglu"
+            onerror="this.src='https://via.placeholder.com/640x800.png?text=Upload+me.jpg+to+repo';"
           />
           <p class="resume-copy">
-            Add your photo as <code>me.jpg</code> in the repo root (same folder as <code>index.html</code>).
+            Computer Engineering focused builder creating AI-powered tools,
+            hackathon projects, and productivity applications. Passionate about
+            real-world tech that improves decision-making and performance.
           </p>
         </div>
       </section>
 
-      <!-- Resume -->
+      <!-- RESUME -->
       <section id="resume" class="container section">
         <div class="section-heading">
           <p class="eyebrow">Resume</p>
           <h2>Readable Resume</h2>
         </div>
-        <p class="resume-copy">
-          View the clean resume page or open the PDF directly.
-        </p>
         <div class="hero-actions">
           <a class="button primary" href="resume.html">Open Resume Page</a>
-          <a class="button ghost" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
+          <a class="button ghost" href="resume.pdf" target="_blank">Open Resume PDF</a>
         </div>
       </section>
 
-      <!-- Contact -->
+      <!-- CONTACT -->
       <section id="contact" class="container section contact">
         <div>
           <p class="eyebrow">Get in Touch</p>
           <h2>Let’s build something impactful.</h2>
           <p>
-            I’m open to freelance opportunities, full-time roles, and product collaborations.
+            Open to internships, engineering opportunities, and technical
+            collaborations.
           </p>
         </div>
 
-        <a class="button primary" href="mailto:alex@portfolio.dev">alex@portfolio.dev</a>
+        <a class="button primary" href="mailto:adamceng98@gmail.com">
+          adamceng98@gmail.com
+        </a>
       </section>
     </main>
 
     <footer class="container site-footer">
-      <p>© <span id="year"></span> Alex Carter</p>
+      <p>© <span id="year"></span> Adam Cengeloglu</p>
     </footer>
 
     <script src="script.js"></script>
