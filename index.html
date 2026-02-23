@@ -1,9 +1,14 @@
+
+---
+
+## index.html
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adam Cengeloglu | Portfolio</title>
+    <title>Alex Carter | Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,11 +25,20 @@
 
     <header class="site-header">
       <div class="container nav-wrap">
-        <a class="brand" href="#home">AC</a>
+        <a class="brand" href="#home" aria-label="Home">AC</a>
+
         <nav aria-label="Primary">
           <ul class="nav-links">
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#resume">Resume</a></li>
+            <li class="nav-dropdown">
+              <a class="nav-trigger" href="#projects">Projects</a>
+              <ul class="dropdown-menu" aria-label="Project links">
+                <li><a href="emergency.html">FastDispatch</a></li>
+                <li><a href="#projects">Sunrise CRM (dummy)</a></li>
+                <li><a href="#projects">Orbit Notes (dummy)</a></li>
+              </ul>
+            </li>
+
+            <li><a href="resume.html">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -32,101 +46,95 @@
     </header>
 
     <main id="home">
-      <section class="hero container">
-        <p class="eyebrow">Developer • Computer Engineering</p>
-        <h1>Hi, I'm Adam Cengeloglu.</h1>
+      <!-- Projects first (top of page) -->
+      <section id="projects" class="container section top-section">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="project-grid single-project">
+          <a class="card project-link" href="emergency.html" aria-label="Open FastDispatch project page">
+            <h3>FastDispatch Emergency Training Simulator</h3>
+            <p>
+              Interactive emergency dispatcher training app with quizzes, timed scenarios,
+              and AI-assisted conversation practice.
+            </p>
+            <ul class="tag-list">
+              <li>Emergency Response</li>
+              <li>Training</li>
+              <li>AI Chatbot</li>
+            </ul>
+            <span class="open-project">Open project page →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Hero (NO big headline line) -->
+      <section class="hero container" aria-label="Intro">
+        <p class="eyebrow">Full-Stack Developer</p>
         <p class="hero-copy">
-          I build high-performance applications focused on clean architecture,
-          real-world impact, and scalable engineering solutions. Passionate about
-          AI, software development, and problem solving.
+          I design and engineer performant web experiences with a strong focus on usability,
+          accessibility, and maintainable architecture.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">View Projects</a>
-          <a class="button ghost" href="#resume">View Resume</a>
+          <a class="button ghost" href="#contact">Let’s Talk</a>
         </div>
       </section>
 
-      <section id="projects" class="container section">
+      <!-- Your photo -->
+      <section id="about" class="container section about">
         <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Recent Projects</h2>
+          <p class="eyebrow">About Me</p>
+          <h2>Photo</h2>
         </div>
 
-        <div class="project-grid">
-          <article class="card">
-            <h3>AI Emergency Training Simulator</h3>
-            <p>
-              3rd Place at UCSD TritonHacks. Built an AI-powered simulator that
-              mimics real distress calls and quizzes trainees on emergency response.
-            </p>
-            <ul class="tag-list">
-              <li>Python</li>
-              <li>AI</li>
-              <li>APIs</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Productivity Web App</h3>
-            <p>
-              A React-based productivity platform designed for task optimization,
-              scheduling, and AI-assisted workflow management.
-            </p>
-            <ul class="tag-list">
-              <li>React</li>
-              <li>JavaScript</li>
-              <li>Web Apps</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Roblox Systems Development</h3>
-            <p>
-              Engineered scalable Lua systems including upgrade trees, NPC logic,
-              and modular game architectures for interactive experiences.
-            </p>
-            <ul class="tag-list">
-              <li>Lua</li>
-              <li>Game Dev</li>
-              <li>Systems Design</li>
-            </ul>
-          </article>
+        <div class="about-wrap">
+          <img
+            class="profile-photo"
+            src="me.jpg"
+            alt="Portrait photo of Alex Carter"
+            loading="lazy"
+            onerror="this.onerror=null; this.src='https://via.placeholder.com/640x800.png?text=Add+me.jpg+to+repo';"
+          />
+          <p class="resume-copy">
+            Add your photo as <code>me.jpg</code> in the repo root (same folder as <code>index.html</code>).
+          </p>
         </div>
       </section>
 
+      <!-- Resume -->
       <section id="resume" class="container section">
         <div class="section-heading">
-          <p class="eyebrow">Professional Overview</p>
-          <h2>My Resume</h2>
+          <p class="eyebrow">Resume</p>
+          <h2>Readable Resume</h2>
         </div>
-
-        <div class="resume-wrapper">
-          <!-- IMPORTANT: Put your PDF in the same folder and name it resume.pdf -->
-          <iframe
-            src="resume.pdf"
-            title="Adam Cengeloglu Resume"
-            class="resume-frame"
-          ></iframe>
+        <p class="resume-copy">
+          View the clean resume page or open the PDF directly.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="resume.html">Open Resume Page</a>
+          <a class="button ghost" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
         </div>
       </section>
 
+      <!-- Contact -->
       <section id="contact" class="container section contact">
         <div>
           <p class="eyebrow">Get in Touch</p>
           <h2>Let’s build something impactful.</h2>
           <p>
-            Open to internships, engineering opportunities, and technical collaborations.
+            I’m open to freelance opportunities, full-time roles, and product collaborations.
           </p>
         </div>
 
-        <a class="button primary" href="mailto:adamceng98@gmail.com">
-          adamceng98@gmail.com
-        </a>
+        <a class="button primary" href="mailto:alex@portfolio.dev">alex@portfolio.dev</a>
       </section>
     </main>
 
     <footer class="container site-footer">
-      <p>© <span id="year"></span> Adam Cengeloglu</p>
+      <p>© <span id="year"></span> Alex Carter</p>
     </footer>
 
     <script src="script.js"></script>
