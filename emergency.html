@@ -1,14 +1,9 @@
-
----
-
-## index.html
-```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Carter | Portfolio</title>
+    <title>Resume | Adam Cengeloglu</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,126 +11,46 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-
     <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
     <div class="background-glow" aria-hidden="true"></div>
 
-    <header class="site-header">
-      <div class="container nav-wrap">
-        <a class="brand" href="#home" aria-label="Home">AC</a>
+    <main class="container section resume-page">
+      <a class="button ghost" href="index.html">← Back to portfolio</a>
 
-        <nav aria-label="Primary">
-          <ul class="nav-links">
-            <li class="nav-dropdown">
-              <a class="nav-trigger" href="#projects">Projects</a>
-              <ul class="dropdown-menu" aria-label="Project links">
-                <li><a href="emergency.html">FastDispatch</a></li>
-                <li><a href="#projects">Sunrise CRM (dummy)</a></li>
-                <li><a href="#projects">Orbit Notes (dummy)</a></li>
-              </ul>
-            </li>
-
-            <li><a href="resume.html">Resume</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+      <div class="section-heading">
+        <p class="eyebrow">Resume</p>
+        <h1 class="page-title">Adam Cengeloglu</h1>
       </div>
-    </header>
 
-    <main id="home">
-      <!-- Projects first (top of page) -->
-      <section id="projects" class="container section top-section">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Projects</h2>
-        </div>
 
-        <div class="project-grid single-project">
-          <a class="card project-link" href="emergency.html" aria-label="Open FastDispatch project page">
-            <h3>FastDispatch Emergency Training Simulator</h3>
-            <p>
-              Interactive emergency dispatcher training app with quizzes, timed scenarios,
-              and AI-assisted conversation practice.
-            </p>
-            <ul class="tag-list">
-              <li>Emergency Response</li>
-              <li>Training</li>
-              <li>AI Chatbot</li>
-            </ul>
-            <span class="open-project">Open project page →</span>
+      <div class="hero-actions">
+        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
+        <a class="button ghost" href="resume.pdf" download>Download PDF</a>
+      </div>
+
+      <section class="resume-card" aria-label="Resume content">
+        <h2 class="resume-h2">Summary</h2>
+
+
+        <h2 class="resume-h2">Skills</h2>
+        </ul>
+
+        <h2 class="resume-h2">Project Highlight</h2>
+        <p class="resume-p">
+          <strong>FastDispatch</strong> — emergency dispatch training simulator with timed scenarios and AI-assisted practice.
+          <a class="inline-link" href="https://devpost.com/software/fastdispatch" target="_blank" rel="noopener">
+            View on Devpost →
           </a>
-        </div>
-      </section>
-
-      <!-- Hero (NO big headline line) -->
-      <section class="hero container" aria-label="Intro">
-        <p class="eyebrow">Full-Stack Developer</p>
-        <p class="hero-copy">
-          I design and engineer performant web experiences with a strong focus on usability,
-          accessibility, and maintainable architecture.
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button ghost" href="#contact">Let’s Talk</a>
-        </div>
-      </section>
 
-      <!-- Your photo -->
-      <section id="about" class="container section about">
-        <div class="section-heading">
-          <p class="eyebrow">About Me</p>
-          <h2>Photo</h2>
-        </div>
-
-        <div class="about-wrap">
-          <img
-            class="profile-photo"
-            src="me.jpg"
-            alt="Portrait photo of Alex Carter"
-            loading="lazy"
-            onerror="this.onerror=null; this.src='https://via.placeholder.com/640x800.png?text=Add+me.jpg+to+repo';"
-          />
-          <p class="resume-copy">
-            Add your photo as <code>me.jpg</code> in the repo root (same folder as <code>index.html</code>).
-          </p>
-        </div>
-      </section>
-
-      <!-- Resume -->
-      <section id="resume" class="container section">
-        <div class="section-heading">
-          <p class="eyebrow">Resume</p>
-          <h2>Readable Resume</h2>
-        </div>
-        <p class="resume-copy">
-          View the clean resume page or open the PDF directly.
+        <p class="resume-note">
+          Replace this content with your real resume details (or keep this as a readable web version alongside your PDF).
         </p>
-        <div class="hero-actions">
-          <a class="button primary" href="resume.html">Open Resume Page</a>
-          <a class="button ghost" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
-        </div>
-      </section>
-
-      <!-- Contact -->
-      <section id="contact" class="container section contact">
-        <div>
-          <p class="eyebrow">Get in Touch</p>
-          <h2>Let’s build something impactful.</h2>
-          <p>
-            I’m open to freelance opportunities, full-time roles, and product collaborations.
-          </p>
-        </div>
-
-        <a class="button primary" href="mailto:alex@portfolio.dev">alex@portfolio.dev</a>
       </section>
     </main>
-
-    <footer class="container site-footer">
-      <p>© <span id="year"></span> Alex Carter</p>
-    </footer>
 
     <script src="script.js"></script>
   </body>
