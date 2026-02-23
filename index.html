@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alex Carter | Portfolio</title>
+    <title>Adam Cengeloglu | Portfolio</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,7 +24,7 @@
         <nav aria-label="Primary">
           <ul class="nav-links">
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
+            <li><a href="#resume">Resume</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
@@ -33,15 +33,16 @@
 
     <main id="home">
       <section class="hero container">
-        <p class="eyebrow">Full-Stack Developer</p>
-        <h1>I build polished digital products with clean code.</h1>
+        <p class="eyebrow">Developer • Student • Engineer</p>
+        <h1>Hi, I'm Adam Cengeloglu.</h1>
         <p class="hero-copy">
-          I design and engineer performant web experiences with a strong focus on
-          usability, accessibility, and maintainable architecture.
+          I build polished digital products with clean code, strong usability,
+          and real-world impact. Passionate about computer engineering, AI, and
+          high-performance web applications.
         </p>
         <div class="hero-actions">
           <a class="button primary" href="#projects">View Projects</a>
-          <a class="button ghost" href="#contact">Let’s Talk</a>
+          <a class="button ghost" href="#resume">View Resume</a>
         </div>
       </section>
 
@@ -53,65 +54,60 @@
 
         <div class="project-grid">
           <article class="card">
-            <h3>Nova Analytics Dashboard</h3>
+            <h3>AI Emergency Training Simulator</h3>
             <p>
-              A real-time reporting suite for product teams with custom charting,
-              role-based permissions, and instant query filtering.
+              Built for UCSD TritonHacks (3rd Place). An AI-powered simulator that
+              mimics real-life distress calls and quizzes trainees on emergency response.
+            </p>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>AI</li>
+              <li>API Integration</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Productivity Web App</h3>
+            <p>
+              A React-based productivity system focused on task optimization,
+              scheduling, and AI-assisted workflow management.
             </p>
             <ul class="tag-list">
               <li>React</li>
-              <li>TypeScript</li>
-              <li>PostgreSQL</li>
+              <li>JavaScript</li>
+              <li>TanStack Query</li>
             </ul>
           </article>
 
           <article class="card">
-            <h3>Peak Commerce Platform</h3>
+            <h3>Roblox Game Systems</h3>
             <p>
-              A scalable e-commerce storefront optimized for speed and conversion,
-              featuring streamlined checkout and content-rich product pages.
+              Designed scalable game mechanics including upgrade trees, NPC systems,
+              and modular Lua architecture for interactive gameplay experiences.
             </p>
             <ul class="tag-list">
-              <li>Next.js</li>
-              <li>Node.js</li>
-              <li>Stripe</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Helio Team Workspace</h3>
-            <p>
-              A collaborative workspace for distributed teams with live editing,
-              task orchestration, and integrated release tracking.
-            </p>
-            <ul class="tag-list">
-              <li>Vue</li>
-              <li>Firebase</li>
-              <li>Tailwind</li>
+              <li>Lua</li>
+              <li>Game Design</li>
+              <li>Systems Architecture</li>
             </ul>
           </article>
         </div>
       </section>
 
-      <section id="skills" class="container section">
+      <!-- RESUME SECTION (NEW) -->
+      <section id="resume" class="container section">
         <div class="section-heading">
-          <p class="eyebrow">Capabilities</p>
-          <h2>Core Skills</h2>
+          <p class="eyebrow">Professional Overview</p>
+          <h2>My Resume</h2>
         </div>
 
-        <div class="skills-wrap">
-          <div class="skill-group">
-            <h3>Frontend</h3>
-            <p>React, Vue, TypeScript, Accessibility, Performance Optimization</p>
-          </div>
-          <div class="skill-group">
-            <h3>Backend</h3>
-            <p>Node.js, Python, API Design, Authentication, SQL/NoSQL</p>
-          </div>
-          <div class="skill-group">
-            <h3>Workflow</h3>
-            <p>Testing, CI/CD, Docker, GitHub Actions, Product Collaboration</p>
-          </div>
+        <div class="resume-wrapper">
+          <!-- Put your PDF file in the same folder and name it: resume.pdf -->
+          <iframe
+            src="resume.pdf"
+            title="Adam Cengeloglu Resume"
+            class="resume-frame"
+          ></iframe>
         </div>
       </section>
 
@@ -120,17 +116,18 @@
           <p class="eyebrow">Get in Touch</p>
           <h2>Let’s build something impactful.</h2>
           <p>
-            I’m open to freelance opportunities, full-time roles, and product
-            collaborations.
+            Open to internships, engineering opportunities, and tech collaborations.
           </p>
         </div>
 
-        <a class="button primary" href="mailto:alex@portfolio.dev">alex@portfolio.dev</a>
+        <a class="button primary" href="mailto:adamceng98@gmail.com">
+          adamceng98@gmail.com
+        </a>
       </section>
     </main>
 
     <footer class="container site-footer">
-      <p>© <span id="year"></span> Alex Carter</p>
+      <p>© <span id="year"></span> Adam Cengeloglu</p>
     </footer>
 
     <script src="script.js"></script>
