@@ -1,13 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adam C — Portfolio</title>
-</head>
-<body style="font-family: Arial; text-align: center; margin-top: 100px;">
-    <h1>Adam C's Portfolio 🚀</h1>
-    <p>My website is live.</p>
-    <p>More projects coming soon.</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Carter | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="background-glow" aria-hidden="true"></div>
+
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="#home">AC</a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero container">
+        <p class="eyebrow">Full-Stack Developer</p>
+        <h1>I build polished digital products with clean code.</h1>
+        <p class="hero-copy">
+          I design and engineer performant web experiences with a strong focus on
+          usability, accessibility, and maintainable architecture.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button ghost" href="#contact">Let’s Talk</a>
+        </div>
+      </section>
+
+      <section id="projects" class="container section">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Work</p>
+          <h2>Recent Projects</h2>
+        </div>
+        <div class="project-grid">
+          <article class="card">
+            <h3>Nova Analytics Dashboard</h3>
+            <p>
+              A real-time reporting suite for product teams with custom charting,
+              role-based permissions, and instant query filtering.
+            </p>
+            <ul class="tag-list">
+              <li>React</li>
+              <li>TypeScript</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Peak Commerce Platform</h3>
+            <p>
+              A scalable e-commerce storefront optimized for speed and conversion,
+              featuring streamlined checkout and content-rich product pages.
+            </p>
+            <ul class="tag-list">
+              <li>Next.js</li>
+              <li>Node.js</li>
+              <li>Stripe</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Helio Team Workspace</h3>
+            <p>
+              A collaborative workspace for distributed teams with live editing,
+              task orchestration, and integrated release tracking.
+            </p>
+            <ul class="tag-list">
+              <li>Vue</li>
+              <li>Firebase</li>
+              <li>Tailwind</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="container section">
+        <div class="section-heading">
+          <p class="eyebrow">Capabilities</p>
+          <h2>Core Skills</h2>
+        </div>
+        <div class="skills-wrap">
+          <div class="skill-group">
+            <h3>Frontend</h3>
+            <p>React, Vue, TypeScript, Accessibility, Performance Optimization</p>
+          </div>
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <p>Node.js, Python, API Design, Authentication, SQL/NoSQL</p>
+          </div>
+          <div class="skill-group">
+            <h3>Workflow</h3>
+            <p>Testing, CI/CD, Docker, GitHub Actions, Product Collaboration</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="container section contact">
+        <div>
+          <p class="eyebrow">Get in Touch</p>
+          <h2>Let’s build something impactful.</h2>
+          <p>
+            I’m open to freelance opportunities, full-time roles, and product
+            collaborations.
+          </p>
+        </div>
+        <a class="button primary" href="mailto:alex@portfolio.dev">alex@portfolio.dev</a>
+      </section>
+    </main>
+
+    <footer class="container site-footer">
+      <p>© <span id="year"></span> Alex Carter</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
 </html>
