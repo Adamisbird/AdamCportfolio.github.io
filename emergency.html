@@ -19,6 +19,27 @@
         <h1>FastDispatch Emergency Training Simulator</h1>
       </div>
 
+      <!-- PHOTOS + EDITABLE TEXTBOX (UNDER HEADER, ABOVE EVERYTHING ELSE) -->
+      <section class="profile-section" aria-label="Profile photos and editable intro">
+        <div class="profile-row">
+          <div class="profile-images">
+            <img src="me.jpg" alt="Adam Cengeloglu photo 1" />
+            <img src="me3.jpg" alt="Adam Cengeloglu photo 2" />
+          </div>
+
+          <div class="profile-textbox">
+            <label for="projectIntro">Editable project intro</label>
+            <textarea id="projectIntro" class="editable-box">
+I built FastDispatch, an AI-powered emergency training simulator that helps users practice high-pressure decision-making.
+
+It simulates realistic dispatcher scenarios with timed interactions and AI chatbot responses. Built with Python and the Google Gemini API.
+
+(You can edit this text anytime.)
+            </textarea>
+          </div>
+        </div>
+      </section>
+
       <p class="hero-copy">
         FastDispatch is an AI-powered emergency response training system designed
         to simulate real dispatcher scenarios. Built to help users practice
@@ -30,6 +51,7 @@
         class="button primary"
         href="https://devpost.com/software/fastdispatch"
         target="_blank"
+        rel="noopener"
       >
         View on Devpost
       </a>
@@ -51,5 +73,7 @@
         </figure>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
