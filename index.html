@@ -3,12 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About | Adam Cengeloglu</title>
+    <title>Adam Cengeloglu | Portfolio</title>
 
     <link rel="stylesheet" href="styles.css" />
 
     <style>
-      /* Top profile section */
+      /* NAVBAR */
+      .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        margin-bottom: 20px;
+      }
+
+      .logo {
+        font-weight: 700;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+      }
+
+      .nav-buttons {
+        display: flex;
+        gap: 14px;
+      }
+
+      .nav-button {
+        padding: 10px 18px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: rgba(255, 255, 255, 0.05);
+        text-decoration: none;
+        color: inherit;
+        font-size: 0.9rem;
+        transition: all 0.2s ease;
+      }
+
+      .nav-button:hover {
+        border-color: rgba(255, 165, 0, 0.6);
+        transform: translateY(-2px);
+      }
+
+      /* Profile section */
       .profile-section {
         margin: 40px 0 28px 0;
       }
@@ -50,7 +86,6 @@
         text-transform: uppercase;
       }
 
-      /* Non-editable display box (looks like your old textbox but static) */
       .editable-box {
         width: 100%;
         min-height: 230px;
@@ -70,31 +105,37 @@
   <body>
     <div class="background-glow"></div>
 
-    <main class="container section project-page">
-      <a class="button ghost" href="index.html">← Back to portfolio</a>
+    <main class="container section">
+      <!-- HEADER NAV (NEW) -->
+      <header class="site-header">
+        <div class="logo">Adam Cengeloglu</div>
+        <div class="nav-buttons">
+          <a href="projects.html" class="nav-button">Projects</a>
+          <a href="resume.html" class="nav-button">Resume</a>
+        </div>
+      </header>
 
       <div class="section-heading">
         <p class="eyebrow">About Me</p>
         <h1>Adam Cengeloglu</h1>
       </div>
 
-      <!-- PROFILE SECTION (Photos + Personal Description) -->
+      <!-- PROFILE SECTION -->
       <section class="profile-section">
         <div class="profile-row">
           
-          <!-- LEFT: Photos -->
+          <!-- Photos -->
           <div class="profile-images">
-            <img src="me.jpg" alt="Adam Cengeloglu photo 1" />
-            <img src="me2.jpg" alt="Adam Cengeloglu photo 2" />
-            <img src="me3.jpg" alt="Adam Cengeloglu photo 3" />
+            <img src="me.jpg" alt="Adam photo 1" />
+            <img src="me2.jpg" alt="Adam photo 2" />
+            <img src="me3.jpg" alt="Adam photo 3" />
           </div>
 
-          <!-- RIGHT: Non-editable personal description -->
+          <!-- Description -->
           <div class="profile-textbox">
             <label>Who I Am</label>
             <div class="editable-box">
 Im a socal native and have always been driven by purpose. In my freetime I go to the gym, work on small projects, and mess around with friends!
-            </div>
           </div>
 
         </div>
