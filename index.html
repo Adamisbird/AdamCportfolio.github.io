@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FastDispatch | Adam Cengeloglu</title>
+    <title>About | Adam Cengeloglu</title>
 
     <link rel="stylesheet" href="styles.css" />
 
     <style>
       /* Top profile section */
       .profile-section {
-        margin: 24px 0 28px 0;
+        margin: 40px 0 28px 0;
       }
 
       .profile-row {
@@ -39,31 +39,30 @@
         min-width: 260px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
       }
 
       .profile-textbox label {
         font-size: 0.9rem;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         opacity: 0.8;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
+      /* Non-editable display box (looks like your old textbox but static) */
       .editable-box {
         width: 100%;
         min-height: 230px;
-        padding: 16px;
+        padding: 20px;
         border-radius: 18px;
         border: 1px solid rgba(255, 255, 255, 0.12);
         background: rgba(255, 255, 255, 0.05);
         color: inherit;
         font-family: inherit;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        resize: vertical;
-        outline: none;
-      }
-
-      .editable-box:focus {
-        border-color: rgba(255, 165, 0, 0.6); /* matches your orange theme */
+        font-size: 1rem;
+        line-height: 1.7;
+        white-space: pre-wrap;
       }
     </style>
   </head>
@@ -75,67 +74,30 @@
       <a class="button ghost" href="index.html">← Back to portfolio</a>
 
       <div class="section-heading">
-        <p class="eyebrow">Hackathon Project</p>
-        <h1>FastDispatch Emergency Training Simulator</h1>
+        <p class="eyebrow">About Me</p>
+        <h1>Adam Cengeloglu</h1>
       </div>
 
-      <!-- PROFILE SECTION (Photos + Editable Text) -->
-      <!-- This is ABOVE everything else and directly under the header -->
+      <!-- PROFILE SECTION (Photos + Personal Description) -->
       <section class="profile-section">
         <div class="profile-row">
           
-          <!-- LEFT: Your photos (use SAME images as index page) -->
+          <!-- LEFT: Photos -->
           <div class="profile-images">
-            <!-- Replace with the exact filenames from your index page -->
-            <img src="me1.png" alt="Adam Cengeloglu photo 1" />
-            <img src="me2.png" alt="Adam Cengeloglu photo 2" />
+            <img src="me.jpg" alt="Adam Cengeloglu photo 1" />
+            <img src="me2.jpg" alt="Adam Cengeloglu photo 2" />
+            <img src="me3.jpg" alt="Adam Cengeloglu photo 3" />
           </div>
 
-          <!-- RIGHT: Editable text box -->
+          <!-- RIGHT: Non-editable personal description -->
           <div class="profile-textbox">
-            <label>Edit this text (About / Intro)</label>
-            <textarea class="editable-box">
-I am a Computer Engineering-focused student and 3rd place TritonHacks winner who built FastDispatch, an AI-powered emergency training simulator. 
-
-This project simulates real dispatcher scenarios using AI chat interactions and timed decision-making to train users under pressure. It combines Python, AI APIs, and realistic scenario logic to create an interactive learning experience for emergency response training.
-
-(You can edit this text directly in the website.)
-            </textarea>
+            <label>Who I Am</label>
+            <div class="editable-box">
+Im a socal native and have always been driven by purpose. In my freetime I go to the gym, work on small projects, and mess around with friends!
+            </div>
           </div>
 
         </div>
-      </section>
-
-      <p class="hero-copy">
-        FastDispatch is an AI-powered emergency response training system designed
-        to simulate real dispatcher scenarios. Built to help users practice
-        high-pressure decision making with realistic timed interactions and
-        chatbot simulations.
-      </p>
-
-      <a
-        class="button primary"
-        href="https://devpost.com/software/fastdispatch"
-        target="_blank"
-      >
-        View on Devpost
-      </a>
-
-      <section class="image-grid">
-        <figure class="image-card">
-          <img src="project1.png" alt="FastDispatch Screenshot 1" />
-          <figcaption>Main interface</figcaption>
-        </figure>
-
-        <figure class="image-card">
-          <img src="project2.png" alt="FastDispatch Screenshot 2" />
-          <figcaption>Scenario system</figcaption>
-        </figure>
-
-        <figure class="image-card">
-          <img src="project3.png" alt="FastDispatch Screenshot 3" />
-          <figcaption>AI chatbot simulation</figcaption>
-        </figure>
       </section>
     </main>
   </body>
