@@ -15,14 +15,15 @@
     <link rel="stylesheet" href="styles.css" />
 
     <style>
-      /* Keep same site vibe as resume.html */
-
+      /* --- Consistent top nav (matches your site style) --- */
       .site-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 16px;
+        padding: 18px 0 14px;
         margin-bottom: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
 
       .brand {
@@ -30,6 +31,7 @@
         font-size: 1.1rem;
         letter-spacing: 0.02em;
         opacity: 0.95;
+        line-height: 1;
       }
 
       .nav {
@@ -44,68 +46,67 @@
         border-radius: 999px;
       }
 
+      /* --- Layout polish --- */
       .profile-section {
-        margin-top: 16px;
+        margin-top: 10px;
       }
 
       .profile-row {
-        display: flex;
-        gap: 24px;
-        align-items: stretch;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 28px;
+        align-items: start;
+      }
+
+      @media (max-width: 980px) {
+        .profile-row {
+          grid-template-columns: 1fr;
+        }
       }
 
       .profile-images {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 16px;
-        flex-wrap: wrap;
+      }
+
+      @media (max-width: 640px) {
+        .profile-images {
+          grid-template-columns: 1fr;
+        }
       }
 
       .profile-images img {
-        width: 180px;
-        height: 230px;
+        width: 100%;
+        height: 260px;
         object-fit: cover;
         border-radius: 18px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
       }
 
-      .profile-textbox {
-        flex: 1;
-        min-width: 320px;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .profile-textbox .label {
-        font-size: 0.85rem;
-        letter-spacing: 0.12em;
+      /* --- Who I am styling (bigger + bolder orange) --- */
+      .who-title {
+        font-size: 1.1rem;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
-        opacity: 0.8;
-        margin: 6px 0 10px;
+        font-weight: 900;
+        margin: 8px 0 14px;
+        color: rgba(255, 165, 0, 0.98);
       }
 
-      /* Match the resume-card feel */
-      .about-card {
-        padding: 22px;
-        border-radius: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(255, 255, 255, 0.05);
-      }
-
-      .about-card p {
+      /* No box, just clean white text */
+      .who-text {
         margin: 0;
-        line-height: 1.7;
-        font-size: 1rem;
-        white-space: pre-wrap;
+        font-size: 1.05rem;
+        line-height: 1.85;
+        color: rgba(255, 255, 255, 0.92);
+        max-width: 60ch;
       }
 
-      /* small spacing polish */
-      .section-heading {
-        margin-top: 6px;
-      }
-
-      .page-title {
-        margin-bottom: 6px;
+      @media (max-width: 980px) {
+        .who-text {
+          max-width: 75ch;
+        }
       }
     </style>
   </head>
@@ -114,7 +115,7 @@
     <div class="background-glow" aria-hidden="true"></div>
 
     <main class="container section">
-      <!-- Header (replaces the back button) -->
+      <!-- Clean header nav (consistent everywhere) -->
       <header class="site-header">
         <div class="brand">Adam Cengeloglu</div>
         <nav class="nav" aria-label="Primary navigation">
@@ -132,23 +133,17 @@
         <div class="profile-row">
           <!-- Photos -->
           <div class="profile-images">
-            <!-- NOTE: explicit ./ prevents path weirdness -->
             <img src="./me.jpg" alt="Adam photo 1" />
             <img src="./me2.JPG" alt="Adam photo 2" />
             <img src="./me3.jpg" alt="Adam photo 3" />
           </div>
 
-          <!-- About -->
-          <div class="profile-textbox">
-            <div class="label">Who I Am</div>
-
-            <div class="about-card">
-              <p>
-I’m a Computer Engineering-focused student who likes building things that actually work in the real world. I’m into software, problem-solving, and systems that feel clean, fast, and useful.
-
-Outside of school, I’m big on leadership, athletics, and mentoring — I like responsibility and I like improving every week. I’m driven by purpose, and I’m always working on something.
-              </p>
-            </div>
+          <!-- YOUR TEXT -->
+          <div>
+            <div class="who-title">Who I Am</div>
+            <p class="who-text">
+              Im a socal native and have always been driven by purpose. In my freetime I go to the gym, work on small projects, and mess around with friends!
+            </p>
           </div>
         </div>
       </section>
