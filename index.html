@@ -3,63 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adam Cengeloglu | Portfolio</title>
+    <title>Home | Adam Cengeloglu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="styles.css" />
 
     <style>
-      /* NAVBAR */
+      /* Keep same site vibe as resume.html */
+
       .site-header {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 20px 0;
-        margin-bottom: 20px;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
       }
 
-      .logo {
-        font-weight: 700;
-        font-size: 1.2rem;
-        letter-spacing: 0.08em;
+      .brand {
+        font-weight: 800;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
+        opacity: 0.95;
       }
 
-      .nav-buttons {
+      .nav {
         display: flex;
-        gap: 14px;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
       }
 
-      .nav-button {
-        padding: 10px 18px;
+      .nav .button {
+        padding: 10px 16px;
         border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        background: rgba(255, 255, 255, 0.05);
-        text-decoration: none;
-        color: inherit;
-        font-size: 0.9rem;
-        transition: all 0.2s ease;
       }
 
-      .nav-button:hover {
-        border-color: rgba(255, 165, 0, 0.6);
-        transform: translateY(-2px);
-      }
-
-      /* Profile section */
       .profile-section {
-        margin: 40px 0 28px 0;
+        margin-top: 16px;
       }
 
       .profile-row {
         display: flex;
-        align-items: stretch;
         gap: 24px;
+        align-items: stretch;
         flex-wrap: wrap;
       }
 
       .profile-images {
         display: flex;
         gap: 16px;
-        flex-shrink: 0;
+        flex-wrap: wrap;
       }
 
       .profile-images img {
@@ -72,74 +71,89 @@
 
       .profile-textbox {
         flex: 1;
-        min-width: 260px;
+        min-width: 320px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
       }
 
-      .profile-textbox label {
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-        opacity: 0.8;
-        letter-spacing: 0.08em;
+      .profile-textbox .label {
+        font-size: 0.85rem;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
+        opacity: 0.8;
+        margin: 6px 0 10px;
       }
 
-      .editable-box {
-        width: 100%;
-        min-height: 230px;
-        padding: 20px;
+      /* Match the resume-card feel */
+      .about-card {
+        padding: 22px;
         border-radius: 18px;
         border: 1px solid rgba(255, 255, 255, 0.12);
         background: rgba(255, 255, 255, 0.05);
-        color: inherit;
-        font-family: inherit;
-        font-size: 1rem;
+      }
+
+      .about-card p {
+        margin: 0;
         line-height: 1.7;
+        font-size: 1rem;
         white-space: pre-wrap;
+      }
+
+      /* small spacing polish */
+      .section-heading {
+        margin-top: 6px;
+      }
+
+      .page-title {
+        margin-bottom: 6px;
       }
     </style>
   </head>
 
   <body>
-    <div class="background-glow"></div>
+    <div class="background-glow" aria-hidden="true"></div>
 
     <main class="container section">
-      <!-- HEADER NAV (NEW) -->
+      <!-- Header (replaces the back button) -->
       <header class="site-header">
-        <div class="logo">Adam Cengeloglu</div>
-        <div class="nav-buttons">
-          <a href="projects.html" class="nav-button">Projects</a>
-          <a href="resume.html" class="nav-button">Resume</a>
-        </div>
+        <div class="brand">Adam Cengeloglu</div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="button ghost" href="projects.html">Projects</a>
+          <a class="button ghost" href="resume.html">Resume</a>
+        </nav>
       </header>
 
       <div class="section-heading">
         <p class="eyebrow">About Me</p>
-        <h1>Adam Cengeloglu</h1>
+        <h1 class="page-title">Adam Cengeloglu</h1>
       </div>
 
-      <!-- PROFILE SECTION -->
       <section class="profile-section">
         <div class="profile-row">
-          
           <!-- Photos -->
           <div class="profile-images">
-            <img src="me.jpg" alt="Adam photo 1" />
-            <img src="me2.JPG" alt="Adam photo 2" />
-            <img src="me3.jpg" alt="Adam photo 3" />
+            <!-- NOTE: explicit ./ prevents path weirdness -->
+            <img src="./me.jpg" alt="Adam photo 1" />
+            <img src="./me2.JPG" alt="Adam photo 2" />
+            <img src="./me3.jpg" alt="Adam photo 3" />
           </div>
 
-          <!-- Description -->
+          <!-- About -->
           <div class="profile-textbox">
-            <label>Who I Am</label>
-            <div class="editable-box">
-Im a socal native and have always been driven by purpose. In my freetime I go to the gym, work on small projects, and mess around with friends!
-          </div>
+            <div class="label">Who I Am</div>
 
+            <div class="about-card">
+              <p>
+I’m a Computer Engineering-focused student who likes building things that actually work in the real world. I’m into software, problem-solving, and systems that feel clean, fast, and useful.
+
+Outside of school, I’m big on leadership, athletics, and mentoring — I like responsibility and I like improving every week. I’m driven by purpose, and I’m always working on something.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
+
+    <script src="script.js"></script>
   </body>
 </html>
