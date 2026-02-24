@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Adam Cengeloglu</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .brand {
+        font-weight: 800;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
+        opacity: 0.95;
+      }
+
+      .nav {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav .button {
+        padding: 10px 16px;
+        border-radius: 999px;
+      }
+
+      .projects-grid {
+        margin-top: 18px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 18px;
+      }
+
+      /* Same resume-card feel */
+      .project-card {
+        padding: 20px;
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.05);
+      }
+
+      .project-title {
+        font-weight: 700;
+        font-size: 1.05rem;
+        margin-bottom: 8px;
+      }
+
+      .project-desc {
+        margin: 0;
+        opacity: 0.9;
+        line-height: 1.6;
+      }
+
+      .project-actions {
+        margin-top: 14px;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+
+      .project-actions .button {
+        padding: 10px 14px;
+        border-radius: 999px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="background-glow" aria-hidden="true"></div>
+
+    <main class="container section">
+      <header class="site-header">
+        <div class="brand">Adam Cengeloglu</div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="button ghost" href="index.html">Home</a>
+          <a class="button ghost" href="resume.html">Resume</a>
+        </nav>
+      </header>
+
+      <div class="section-heading">
+        <p class="eyebrow">My Work</p>
+        <h1 class="page-title">Projects</h1>
+      </div>
+
+      <section class="projects-grid" aria-label="Project list">
+        <!-- Example: your existing emergency.html page -->
+        <article class="project-card">
+          <div class="project-title">FastDispatch Emergency Simulator</div>
+          <p class="project-desc">
+            AI-driven emergency training experience with scenario flow, timed choices, and interactive simulation.
+          </p>
+          <div class="project-actions">
+            <a class="button primary" href="emergency.html">Open Project</a>
+            <!-- Optional: replace # with your real repo/devpost link -->
+            <a class="button ghost" href="#" target="_blank" rel="noopener">Link</a>
+          </div>
+        </article>
+
+        <!-- Placeholder cards you can edit -->
+        <article class="project-card">
+          <div class="project-title">Project Title</div>
+          <p class="project-desc">
+            Short description of what it is, what tech you used, and why it matters.
+          </p>
+          <div class="project-actions">
+            <a class="button ghost" href="#">Open</a>
+            <a class="button ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title">Project Title</div>
+          <p class="project-desc">
+            Add more projects here (Roblox games, hackathons, tools, apps).
+          </p>
+          <div class="project-actions">
+            <a class="button ghost" href="#">Open</a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
