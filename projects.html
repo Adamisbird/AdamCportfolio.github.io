@@ -20,7 +20,9 @@
         align-items: center;
         justify-content: space-between;
         gap: 16px;
+        padding: 18px 0 14px;
         margin-bottom: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
 
       .brand {
@@ -28,6 +30,7 @@
         font-size: 1.1rem;
         letter-spacing: 0.02em;
         opacity: 0.95;
+        line-height: 1;
       }
 
       .nav {
@@ -42,23 +45,33 @@
         border-radius: 999px;
       }
 
+      .back-row {
+        margin: 16px 0 0;
+      }
+
+      /* Polished cards */
       .projects-grid {
         margin-top: 18px;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 18px;
       }
 
-      /* Same resume-card feel */
       .project-card {
         padding: 20px;
         border-radius: 18px;
         border: 1px solid rgba(255, 255, 255, 0.12);
         background: rgba(255, 255, 255, 0.05);
+        transition: transform 0.2s ease, border-color 0.2s ease;
+      }
+
+      .project-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(255, 165, 0, 0.45);
       }
 
       .project-title {
-        font-weight: 700;
+        font-weight: 800;
         font-size: 1.05rem;
         margin-bottom: 8px;
       }
@@ -90,10 +103,14 @@
       <header class="site-header">
         <div class="brand">Adam Cengeloglu</div>
         <nav class="nav" aria-label="Primary navigation">
-          <a class="button ghost" href="index.html">Home</a>
+          <a class="button ghost" href="projects.html">Projects</a>
           <a class="button ghost" href="resume.html">Resume</a>
         </nav>
       </header>
+
+      <div class="back-row">
+        <a class="button ghost" href="index.html">← Back to portfolio</a>
+      </div>
 
       <div class="section-heading">
         <p class="eyebrow">My Work</p>
@@ -101,35 +118,34 @@
       </div>
 
       <section class="projects-grid" aria-label="Project list">
-        <!-- Example: your existing emergency.html page -->
         <article class="project-card">
           <div class="project-title">FastDispatch Emergency Simulator</div>
           <p class="project-desc">
-            AI-driven emergency training experience with scenario flow, timed choices, and interactive simulation.
+            Emergency dispatch training simulator with timed scenarios and AI-assisted practice.
           </p>
           <div class="project-actions">
             <a class="button primary" href="emergency.html">Open Project</a>
-            <!-- Optional: replace # with your real repo/devpost link -->
+            <a class="button ghost" href="https://devpost.com/software/fastdispatch" target="_blank" rel="noopener">
+              Devpost
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-title">Project Title</div>
+          <p class="project-desc">
+            Add your next project here — Roblox games, AI tools, apps, anything.
+          </p>
+          <div class="project-actions">
+            <a class="button ghost" href="#">Open</a>
             <a class="button ghost" href="#" target="_blank" rel="noopener">Link</a>
           </div>
         </article>
 
-        <!-- Placeholder cards you can edit -->
         <article class="project-card">
           <div class="project-title">Project Title</div>
           <p class="project-desc">
-            Short description of what it is, what tech you used, and why it matters.
-          </p>
-          <div class="project-actions">
-            <a class="button ghost" href="#">Open</a>
-            <a class="button ghost" href="#" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </article>
-
-        <article class="project-card">
-          <div class="project-title">Project Title</div>
-          <p class="project-desc">
-            Add more projects here (Roblox games, hackathons, tools, apps).
+            Keep cards short and clean. One sentence + buttons.
           </p>
           <div class="project-actions">
             <a class="button ghost" href="#">Open</a>
