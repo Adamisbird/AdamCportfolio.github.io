@@ -45,6 +45,14 @@
         border-radius: 999px;
       }
 
+      /* Active page button */
+      .nav .button.active {
+        border-color: rgba(255, 165, 0, 0.55);
+        box-shadow: 0 0 0 1px rgba(255, 165, 0, 0.12) inset;
+        pointer-events: none;
+        opacity: 0.95;
+      }
+
       .back-row {
         margin: 16px 0 0;
       }
@@ -93,6 +101,12 @@
         padding: 10px 14px;
         border-radius: 999px;
       }
+
+      /* Disabled buttons for placeholders */
+      .button.disabled {
+        pointer-events: none;
+        opacity: 0.55;
+      }
     </style>
   </head>
 
@@ -103,7 +117,8 @@
       <header class="site-header">
         <div class="brand">Adam Cengeloglu</div>
         <nav class="nav" aria-label="Primary navigation">
-          <a class="button ghost" href="projects.html">Projects</a>
+          <a class="button ghost" href="index.html">Home</a>
+          <a class="button ghost active" href="projects.html" aria-current="page">Projects</a>
           <a class="button ghost" href="resume.html">Resume</a>
         </nav>
       </header>
@@ -124,8 +139,13 @@
             Emergency dispatch training simulator with timed scenarios and AI-assisted practice.
           </p>
           <div class="project-actions">
-            <a class="button primary" href="emergency.html">Open Project</a>
-            <a class="button ghost" href="https://devpost.com/software/fastdispatch" target="_blank" rel="noopener">
+            <a class="button primary" href="fastdispatch.html">Open Project</a>
+            <a
+              class="button ghost"
+              href="https://devpost.com/software/fastdispatch"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Devpost
             </a>
           </div>
@@ -137,8 +157,8 @@
             Add your next project here — Roblox games, AI tools, apps, anything.
           </p>
           <div class="project-actions">
-            <a class="button ghost" href="#">Open</a>
-            <a class="button ghost" href="#" target="_blank" rel="noopener">Link</a>
+            <a class="button ghost disabled" href="#" aria-disabled="true">Open</a>
+            <a class="button ghost disabled" href="#" aria-disabled="true">Link</a>
           </div>
         </article>
 
@@ -148,7 +168,7 @@
             Keep cards short and clean. One sentence + buttons.
           </p>
           <div class="project-actions">
-            <a class="button ghost" href="#">Open</a>
+            <a class="button ghost disabled" href="#" aria-disabled="true">Open</a>
           </div>
         </article>
       </section>
