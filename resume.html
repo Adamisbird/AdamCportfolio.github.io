@@ -12,13 +12,49 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 18px;
+      }
+
+      .brand {
+        font-weight: 800;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
+        opacity: 0.95;
+      }
+
+      .nav {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav .button {
+        padding: 10px 16px;
+        border-radius: 999px;
+      }
+    </style>
   </head>
 
   <body>
     <div class="background-glow" aria-hidden="true"></div>
 
     <main class="container section resume-page">
-      <a class="button ghost" href="index.html">← Back to portfolio</a>
+      <!-- Header nav (replaces back button) -->
+      <header class="site-header">
+        <div class="brand">Adam Cengeloglu</div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="button ghost" href="index.html">Home</a>
+          <a class="button ghost" href="projects.html">Projects</a>
+        </nav>
+      </header>
 
       <div class="section-heading">
         <p class="eyebrow">Resume</p>
@@ -31,7 +67,6 @@
       </div>
 
       <section class="resume-card" aria-label="Resume content">
-        
         <h2 class="resume-h2">About</h2>
         <p class="resume-p">
           Senior at Westview High School (Class of 2026) with a 4.21 GPA, focused on Computer Engineering,
@@ -133,7 +168,6 @@
         <p class="resume-p">
           Email: adamceng98@gmail.com<br />
         </p>
-
       </section>
     </main>
 
