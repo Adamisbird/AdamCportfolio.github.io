@@ -12,10 +12,10 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <!-- ✅ pages/docs -> ../../css -->
+    <link rel="stylesheet" href="../../css/styles.css" />
 
     <style>
-      /* Page-only polish (keeps your site vibe) */
       .top-actions {
         display: flex;
         flex-wrap: wrap;
@@ -79,7 +79,6 @@
         color: var(--text);
       }
 
-      /* Use your existing image-grid styles but allow 3 columns on wide screens */
       .image-grid {
         margin-top: 18px;
         display: grid;
@@ -130,22 +129,14 @@
       </p>
 
       <div class="top-actions">
-        <a
-          class="button primary"
-          href="https://devpost.com/software/fastdispatch"
-          target="_blank"
-          rel="noopener"
-        >
+        <a class="button primary" href="https://devpost.com/software/fastdispatch" target="_blank" rel="noopener">
           View on Devpost
         </a>
-
-        <!-- Optional: replace # with your real links if you have them -->
         <a class="button ghost" href="#" target="_blank" rel="noopener">GitHub</a>
         <a class="button ghost" href="#" target="_blank" rel="noopener">Live Demo</a>
       </div>
 
       <div class="content-grid">
-        <!-- Main description -->
         <section class="info-card" aria-label="Project details">
           <h2>What it does</h2>
           <p>
@@ -176,45 +167,38 @@
           </p>
         </section>
 
-        <!-- Side summary card -->
         <aside class="side-card" aria-label="Project summary">
           <p class="meta"><strong>Award:</strong> TritonHacks — 3rd Place</p>
           <p class="meta"><strong>Category:</strong> AI + Simulation</p>
           <p class="meta"><strong>Focus:</strong> Training under pressure</p>
 
           <div style="margin-top: 14px">
-            <a
-              class="button ghost"
-              href="https://devpost.com/software/fastdispatch"
-              target="_blank"
-              rel="noopener"
-              style="width: 100%; justify-content: center"
-            >
+            <a class="button ghost" href="https://devpost.com/software/fastdispatch" target="_blank" rel="noopener" style="width: 100%; justify-content: center">
               Open Devpost →
             </a>
           </div>
         </aside>
       </div>
 
-      <!-- Screenshots -->
       <section class="image-grid" aria-label="Project screenshots">
         <figure class="image-card">
-          <img src="project1.png" alt="FastDispatch screenshot 1" />
+          <img src="../../assets/images/project1.png" alt="FastDispatch screenshot 1" />
           <figcaption>Main interface</figcaption>
         </figure>
 
         <figure class="image-card">
-          <img src="project2.png" alt="FastDispatch screenshot 2" />
+          <img src="../../assets/images/project2.png" alt="FastDispatch screenshot 2" />
           <figcaption>Scenario system</figcaption>
         </figure>
 
         <figure class="image-card">
-          <img src="project3.png" alt="FastDispatch screenshot 3" />
+          <img src="../../assets/images/project3.png" alt="FastDispatch screenshot 3" />
           <figcaption>AI feedback</figcaption>
         </figure>
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- ✅ pages/docs -> ../../js -->
+    <script src="../../js/script.js"></script>
   </body>
 </html>
