@@ -104,6 +104,44 @@
         padding: 0.75rem 1rem;
         color: var(--muted);
       }
+
+      /* Mini header to match other docs pages */
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 0 14px;
+        margin-bottom: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .brand {
+        font-weight: 800;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
+        opacity: 0.95;
+        line-height: 1;
+      }
+
+      .nav {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav .button {
+        padding: 10px 16px;
+        border-radius: 999px;
+      }
+
+      .nav .button.active {
+        border-color: rgba(255, 165, 0, 0.55);
+        box-shadow: 0 0 0 1px rgba(255, 165, 0, 0.12) inset;
+        pointer-events: none;
+        opacity: 0.95;
+      }
     </style>
   </head>
 
@@ -111,6 +149,16 @@
     <div class="background-glow" aria-hidden="true"></div>
 
     <main class="container section project-page">
+      <header class="site-header">
+        <div class="brand">Adam Cengeloglu</div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="button ghost" href="../../index.html">Home</a>
+          <a class="button ghost" href="projects.html">Projects</a>
+          <a class="button ghost" href="resume.html">Resume</a>
+          <a class="button ghost active" href="emergency.html" aria-current="page">Emergency</a>
+        </nav>
+      </header>
+
       <a class="button ghost" href="../../index.html">← Back to portfolio</a>
 
       <div class="section-heading">
@@ -166,11 +214,7 @@
           <p class="meta"><strong>Format:</strong> Portfolio write-up</p>
 
           <div style="margin-top: 14px">
-            <a
-              class="button ghost"
-              href="projects.html"
-              style="width: 100%; justify-content: center"
-            >
+            <a class="button ghost" href="projects.html" style="width: 100%; justify-content: center">
               Browse Projects →
             </a>
           </div>
