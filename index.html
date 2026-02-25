@@ -12,7 +12,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <!-- ✅ ROOT -> css/ -->
+    <link rel="stylesheet" href="css/styles.css" />
 
     <style>
       /* --- Consistent top nav (matches your site style) --- */
@@ -115,12 +116,12 @@
     <div class="background-glow" aria-hidden="true"></div>
 
     <main class="container section">
-      <!-- Clean header nav (consistent everywhere) -->
       <header class="site-header">
         <div class="brand">Adam Cengeloglu</div>
         <nav class="nav" aria-label="Primary navigation">
-          <a class="button ghost" href="projects.html">Projects</a>
-          <a class="button ghost" href="resume.html">Resume</a>
+          <!-- ✅ ROOT -> pages/docs -->
+          <a class="button ghost" href="pages/docs/projects.html">Projects</a>
+          <a class="button ghost" href="pages/docs/resume.html">Resume</a>
         </nav>
       </header>
 
@@ -131,14 +132,13 @@
 
       <section class="profile-section">
         <div class="profile-row">
-          <!-- Photos -->
           <div class="profile-images">
-            <img src="./me.jpg" alt="Adam photo 1" />
-            <img src="./me2.JPG" alt="Adam photo 2" />
-            <img src="./me3.jpg" alt="Adam photo 3" />
+            <!-- ✅ ROOT -> assets/images -->
+            <img src="assets/images/me1.jpg" alt="Adam photo 1" />
+            <img src="assets/images/me2.JPG" alt="Adam photo 2" />
+            <img src="assets/images/me3.jpg" alt="Adam photo 3" />
           </div>
 
-          <!-- YOUR TEXT -->
           <div>
             <div class="who-title">Who I Am</div>
             <p class="who-text">
@@ -149,6 +149,7 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- ✅ ROOT -> js/ -->
+    <script src="js/script.js"></script>
   </body>
 </html>
