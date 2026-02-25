@@ -12,7 +12,8 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css" />
+    <!-- ✅ pages/docs -> ../../css -->
+    <link rel="stylesheet" href="../../css/styles.css" />
 
     <style>
       .site-header {
@@ -45,7 +46,6 @@
         border-radius: 999px;
       }
 
-      /* Active page button */
       .nav .button.active {
         border-color: rgba(255, 165, 0, 0.55);
         box-shadow: 0 0 0 1px rgba(255, 165, 0, 0.12) inset;
@@ -57,7 +57,6 @@
         margin: 16px 0 0;
       }
 
-      /* Polished cards */
       .projects-grid {
         margin-top: 18px;
         display: grid;
@@ -102,7 +101,6 @@
         border-radius: 999px;
       }
 
-      /* Disabled buttons for placeholders */
       .button.disabled {
         pointer-events: none;
         opacity: 0.55;
@@ -117,14 +115,15 @@
       <header class="site-header">
         <div class="brand">Adam Cengeloglu</div>
         <nav class="nav" aria-label="Primary navigation">
-          <a class="button ghost" href="index.html">Home</a>
+          <!-- ✅ from pages/docs to root -->
+          <a class="button ghost" href="../../index.html">Home</a>
           <a class="button ghost active" href="projects.html" aria-current="page">Projects</a>
           <a class="button ghost" href="resume.html">Resume</a>
         </nav>
       </header>
 
       <div class="back-row">
-        <a class="button ghost" href="index.html">← Back to portfolio</a>
+        <a class="button ghost" href="../../index.html">← Back to portfolio</a>
       </div>
 
       <div class="section-heading">
@@ -140,12 +139,7 @@
           </p>
           <div class="project-actions">
             <a class="button primary" href="fastdispatch.html">Open Project</a>
-            <a
-              class="button ghost"
-              href="https://devpost.com/software/fastdispatch"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a class="button ghost" href="https://devpost.com/software/fastdispatch" target="_blank" rel="noopener noreferrer">
               Devpost
             </a>
           </div>
@@ -153,9 +147,7 @@
 
         <article class="project-card">
           <div class="project-title">Project Title</div>
-          <p class="project-desc">
-            Add your next project here — Roblox games, AI tools, apps, anything.
-          </p>
+          <p class="project-desc">Add your next project here — Roblox games, AI tools, apps, anything.</p>
           <div class="project-actions">
             <a class="button ghost disabled" href="#" aria-disabled="true">Open</a>
             <a class="button ghost disabled" href="#" aria-disabled="true">Link</a>
@@ -164,9 +156,7 @@
 
         <article class="project-card">
           <div class="project-title">Project Title</div>
-          <p class="project-desc">
-            Keep cards short and clean. One sentence + buttons.
-          </p>
+          <p class="project-desc">Keep cards short and clean. One sentence + buttons.</p>
           <div class="project-actions">
             <a class="button ghost disabled" href="#" aria-disabled="true">Open</a>
           </div>
@@ -174,6 +164,7 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- ✅ pages/docs -> ../../js -->
+    <script src="../../js/script.js"></script>
   </body>
 </html>
