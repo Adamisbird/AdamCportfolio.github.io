@@ -11,10 +11,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+
+    <!-- ✅ pages/docs -> ../../css -->
+    <link rel="stylesheet" href="../../css/styles.css" />
 
     <style>
-      /* Same header as index/projects */
       .site-header {
         display: flex;
         align-items: center;
@@ -45,7 +46,13 @@
         border-radius: 999px;
       }
 
-      /* Put back button under header, consistent placement */
+      .nav .button.active {
+        border-color: rgba(255, 165, 0, 0.55);
+        box-shadow: 0 0 0 1px rgba(255, 165, 0, 0.12) inset;
+        pointer-events: none;
+        opacity: 0.95;
+      }
+
       .back-row {
         margin: 16px 0 0;
       }
@@ -59,14 +66,14 @@
       <header class="site-header">
         <div class="brand">Adam Cengeloglu</div>
         <nav class="nav" aria-label="Primary navigation">
+          <a class="button ghost" href="../../index.html">Home</a>
           <a class="button ghost" href="projects.html">Projects</a>
-          <a class="button ghost" href="resume.html">Resume</a>
+          <a class="button ghost active" href="resume.html" aria-current="page">Resume</a>
         </nav>
       </header>
 
-      <!-- KEEP BACK BUTTON (but always goes to the good index.html) -->
       <div class="back-row">
-        <a class="button ghost" href="index.html">← Back to portfolio</a>
+        <a class="button ghost" href="../../index.html">← Back to portfolio</a>
       </div>
 
       <div class="section-heading">
@@ -75,8 +82,9 @@
       </div>
 
       <div class="hero-actions">
-        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
-        <a class="button ghost" href="resume.pdf" download>Download PDF</a>
+        <!-- ✅ pages/docs -> ../../assets/images/resume.pdf -->
+        <a class="button primary" href="../../assets/images/resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
+        <a class="button ghost" href="../../assets/images/resume.pdf" download>Download PDF</a>
       </div>
 
       <section class="resume-card" aria-label="Resume content">
@@ -98,6 +106,7 @@
       </section>
     </main>
 
-    <script src="script.js"></script>
+    <!-- ✅ pages/docs -> ../../js -->
+    <script src="../../js/script.js"></script>
   </body>
 </html>
