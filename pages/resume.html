@@ -12,69 +12,15 @@
       rel="stylesheet"
     />
 
-    <!-- ✅ pages/docs -> ../../css -->
+    <!-- pages/docs -> ../../css -->
     <link rel="stylesheet" href="../../css/styles.css" />
-
-    <style>
-      .site-header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        padding: 18px 0 14px;
-        margin-bottom: 18px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      }
-
-      .brand {
-        font-weight: 800;
-        font-size: 1.1rem;
-        letter-spacing: 0.02em;
-        opacity: 0.95;
-        line-height: 1;
-      }
-
-      .nav {
-        display: flex;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-      }
-
-      .nav .button {
-        padding: 10px 16px;
-        border-radius: 999px;
-      }
-
-      .nav .button.active {
-        border-color: rgba(255, 165, 0, 0.55);
-        box-shadow: 0 0 0 1px rgba(255, 165, 0, 0.12) inset;
-        pointer-events: none;
-        opacity: 0.95;
-      }
-
-      .back-row {
-        margin: 16px 0 0;
-      }
-    </style>
   </head>
 
   <body>
     <div class="background-glow" aria-hidden="true"></div>
 
     <main class="container section resume-page">
-      <header class="site-header">
-        <div class="brand">Adam Cengeloglu</div>
-        <nav class="nav" aria-label="Primary navigation">
-          <a class="button ghost" href="../../index.html">Home</a>
-          <a class="button ghost" href="projects.html">Projects</a>
-          <a class="button ghost active" href="resume.html" aria-current="page">Resume</a>
-        </nav>
-      </header>
-
-      <div class="back-row">
-        <a class="button ghost" href="../../index.html">← Back to portfolio</a>
-      </div>
+      <a class="button ghost" href="../../index.html">← Back to portfolio</a>
 
       <div class="section-heading">
         <p class="eyebrow">Resume</p>
@@ -82,9 +28,9 @@
       </div>
 
       <div class="hero-actions">
-        <!-- ✅ pages/docs -> ../../assets/images/resume.pdf -->
-        <a class="button primary" href="../../assets/images/resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
-        <a class="button ghost" href="../../assets/images/resume.pdf" download>Download PDF</a>
+        <!-- PDF is right next to this file -->
+        <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
+        <a class="button ghost" href="resume.pdf" download>Download PDF</a>
       </div>
 
       <section class="resume-card" aria-label="Resume content">
@@ -106,7 +52,7 @@
       </section>
     </main>
 
-    <!-- ✅ pages/docs -> ../../js -->
+    <!-- pages/docs -> ../../js -->
     <script src="../../js/script.js"></script>
   </body>
 </html>
