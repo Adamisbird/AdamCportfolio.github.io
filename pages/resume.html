@@ -14,12 +14,60 @@
 
     <!-- pages/docs -> ../../css -->
     <link rel="stylesheet" href="../../css/styles.css" />
+
+    <style>
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 18px 0 14px;
+        margin-bottom: 18px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .brand {
+        font-weight: 800;
+        font-size: 1.1rem;
+        letter-spacing: 0.02em;
+        opacity: 0.95;
+        line-height: 1;
+      }
+
+      .nav {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      .nav .button {
+        padding: 10px 16px;
+        border-radius: 999px;
+      }
+
+      .nav .button.active {
+        border-color: rgba(255, 165, 0, 0.55);
+        box-shadow: 0 0 0 1px rgba(255, 165, 0, 0.12) inset;
+        pointer-events: none;
+        opacity: 0.95;
+      }
+    </style>
   </head>
 
   <body>
     <div class="background-glow" aria-hidden="true"></div>
 
     <main class="container section resume-page">
+      <header class="site-header">
+        <div class="brand">Adam Cengeloglu</div>
+        <nav class="nav" aria-label="Primary navigation">
+          <a class="button ghost" href="../../index.html">Home</a>
+          <a class="button ghost" href="projects.html">Projects</a>
+          <a class="button ghost active" href="resume.html" aria-current="page">Resume</a>
+        </nav>
+      </header>
+
       <a class="button ghost" href="../../index.html">← Back to portfolio</a>
 
       <div class="section-heading">
@@ -31,6 +79,7 @@
         <!-- PDF is right next to this file -->
         <a class="button primary" href="resume.pdf" target="_blank" rel="noopener">Open Resume PDF</a>
         <a class="button ghost" href="resume.pdf" download>Download PDF</a>
+        <a class="button ghost" href="projects.html">View Projects</a>
       </div>
 
       <section class="resume-card" aria-label="Resume content">
@@ -41,8 +90,10 @@
         <h2 class="resume-h2">Project Highlight</h2>
         <p class="resume-p">
           <strong>FastDispatch</strong> — emergency dispatch training simulator with timed scenarios and AI-assisted practice.
+          <a class="inline-link" href="fastdispatch.html">View project →</a>
+          <span style="opacity: 0.9"> | </span>
           <a class="inline-link" href="https://devpost.com/software/fastdispatch" target="_blank" rel="noopener">
-            View on Devpost →
+            Devpost →
           </a>
         </p>
 
